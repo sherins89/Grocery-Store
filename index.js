@@ -43,7 +43,7 @@ function getUppercaseNames(items) {
  * @returns {Item} - the item in `items` with the given `id`
  */
 function getItemById(items, id) {
-  // TODO: use `find`
+  return items.find((item) => item.id === id);
 }
 
 /**
@@ -52,7 +52,12 @@ function getItemById(items, id) {
  * @returns {number} the price of the item named `name` if found
  */
 function getItemPriceByName(items, name) {
-  // TODO: use a loop!
+  for (let item of items) {
+    if (item.name.toLowerCase() === name.toLowerCase()) {
+      return item.price;
+    }
+  }
+  return undefined; // Re-check again before submission - Throw error //
 }
 
 /**
@@ -61,7 +66,9 @@ function getItemPriceByName(items, name) {
  * @returns {Item[]} array of items that belong to the given `category`
  */
 function getItemsByCategory(items, category) {
-  // TODO: use `filter`
+  return items.filter(
+    (item) => item.category.toLowerCase() === category.toLowerCase()
+  );
 }
 
 /**
@@ -69,7 +76,7 @@ function getItemsByCategory(items, category) {
  * @returns {number} the total quantity of all items
  */
 function countItems(items) {
-  // TODO: use `reduce`
+  return.items.reduce((total, item) => total + item.quantity, 0); ///quantity start 0
 }
 
 /**
@@ -77,7 +84,7 @@ function countItems(items) {
  * @returns {number} the cost of all given items
  */
 function getTotalPrice(items) {
-  // TODO: use `reduce`
+  return items.reduce((total, item) => total +item.price * item.quantity, 0);
 }
 
 // === READ BUT DO NOT CHANGE THE CODE BELOW ===
