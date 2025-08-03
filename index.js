@@ -76,7 +76,7 @@ function getItemsByCategory(items, category) {
  * @returns {number} the total quantity of all items
  */
 function countItems(items) {
-  return.items.reduce((total, item) => total + item.quantity, 0); ///quantity start 0
+  return items.reduce((total, item) => total + item.quantity, 0); ///quantity start 0
 }
 
 /**
@@ -84,7 +84,7 @@ function countItems(items) {
  * @returns {number} the cost of all given items
  */
 function getTotalPrice(items) {
-  return items.reduce((total, item) => total +item.price * item.quantity, 0);
+  return items.reduce((total, item) => total + item.price * item.quantity, 0);
 }
 
 // === READ BUT DO NOT CHANGE THE CODE BELOW ===
