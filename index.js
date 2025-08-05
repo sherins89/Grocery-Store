@@ -19,14 +19,14 @@ const inventory = [
   { id: 8, name: "sourdough", price: 5.5, category: "grains", quantity: 81 },
 ];
 
-// === Complete the functions below! ===
+// ===================== Complete the functions below! =======================================
 
 /**
  * Prints out the name of each item in the given array.
  * @param {Item[]} items - array of items
  */
 function logNames(items) {
-  items.forEach((item) => console.log(item.name)); // returns nothing // Do something for each
+  items.forEach((item) => console.log(item.name)); // Do something for each  - Loop and list over the items //
 }
 
 /**
@@ -34,7 +34,7 @@ function logNames(items) {
  * @returns {string[]} an array of item names in all uppercase
  */
 function getUppercaseNames(items) {
-  return items.map((item) => item.name.toUpperCase()); // Transform item //
+  return items.map((item) => item.name.toUpperCase()); // Transform item into UPPERCASE//
 }
 
 /**
@@ -43,7 +43,7 @@ function getUppercaseNames(items) {
  * @returns {Item} - the item in `items` with the given `id`
  */
 function getItemById(items, id) {
-  return items.find((item) => item.id === id); // find first matching item with id //
+  return items.find((item) => item.id === id); // Find first matching item with id //
 }
 
 /**
@@ -57,7 +57,7 @@ function getItemPriceByName(items, name) {
       return item.price;
     }
   }
-  return undefined; // Re-check again before submission - Throw error //
+  return undefined; // Re-check again // Not in Block 14 Criteria //
 }
 
 /**
@@ -76,7 +76,7 @@ function getItemsByCategory(items, category) {
  * @returns {number} the total quantity of all items
  */
 function countItems(items) {
-  return items.reduce((total, item) => total + item.quantity, 0); ///quantity start 0
+  return items.reduce((total, item) => total + item.quantity, 0); // Adds up total items (reduce?) //
 }
 
 /**
@@ -87,7 +87,7 @@ function getTotalPrice(items) {
   return items.reduce((total, item) => total + item.price * item.quantity, 0);
 }
 
-// === READ BUT DO NOT CHANGE THE CODE BELOW ===
+// =========== READ BUT DO NOT CHANGE THE CODE BELOW ============== //
 
 console.log("Welcome! We carry the following items:");
 logNames(inventory);
